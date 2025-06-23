@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 async function traduzir(texto, idioma) {
     const res = await fetch('https://libretranslate.com/translate', {
@@ -11,6 +11,8 @@ async function traduzir(texto, idioma) {
             format: 'text'
         })
     })
-    const data = res.json();
+    const data = await res.json();
     return data.translatedText;
 }
+
+export default traduzir;
