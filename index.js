@@ -22,7 +22,7 @@ client.on('messageCreate', message => {
     } if (message.content === '!bullet') {
         message.reply('aposentado');
     } if (message.content === '!pervious') {
-        message.reply('o cara mais sussegado do grupo');
+        message.reply('riquinho');
     }
     if (message.content === '!faca') {
         message.reply('o cara mais humilde do grupo');
