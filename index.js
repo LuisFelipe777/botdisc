@@ -17,6 +17,15 @@ client.on('messageCreate', message => {
     }
     if (message.content === '!alisson') {
         message.reply('só fica sutando');
+    } if (message.content === '!oneros') {
+        message.reply('só sabe abusar');
+    } if (message.content === '!bullet') {
+        message.reply('aposentado');
+    } if (message.content === '!pervious') {
+        message.reply('o cara mais sussegado do grupo');
+    }
+    if (message.content === '!faca') {
+        message.reply('o cara mais humilde do grupo');
     }
 })
 
