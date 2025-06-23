@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { Client, GatewayIntentBits } from 'discord.js';
-import traduzir from './piadas';
+import traduzir from './piadas.js';
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
@@ -28,12 +28,12 @@ client.on('messageCreate', async (message) => {
     if (message.content === '!faca') {
         message.reply('o cara mais humilde do grupo');
     }
-    if (message.content.startsWith === '!traduza') {
+    if (message.content.startsWith('!traduza')) {
         const args = message.content.split(' ');
         const idioma = args[1];
         const texto = args.slice(2).join('');
         try {
-            const textoTraduzido = await traduzir(idioma, texto);
+            const textoTraduzido = await traduzir(texto, texto);
             message.reply("✅Tradução: " + textoTraduzido);
         } catch (error) {
             console.error('Erro na tradução:', error);
