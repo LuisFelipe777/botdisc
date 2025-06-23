@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-async function traduzir(texto, idioma) {
+export default async function traduzir(texto, idioma) {
     const res = await fetch('https://libretranslate.com/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -14,5 +14,3 @@ async function traduzir(texto, idioma) {
     const data = await res.json();
     return data.translatedText;
 }
-
-export default traduzir;
